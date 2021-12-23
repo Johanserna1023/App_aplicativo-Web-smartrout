@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="estilos/estilos_iniciar_sesion.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #030883 ;">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html" src="img/logo.JPG"><img src="img/logo.JPG" alt="#home" /></a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Registro.html" target="registro">Registrarse</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light" href="iniciar_sesion.html" target="sesion">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light" href="contactanos.html" target="contactanos">Contáctenos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light" href="#about">Rutas</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div>
+      <section class="contact-box">
+        <div class="row no-gutters" style="background-color: #030883;">
+          <div class="col-xl-5 col-lg-12 register-bg">
+            <div class="position-absolute testimonial p-4">
+              <h3 class="font-weight-bold " style="color:black;"> La App de Transporte.</h3>
+              <p class="lead" style="color:black;">Tu nueva App de ayuda para tus rutas.</p>
+            </div>
+          </div>
+          <div class="col-xl-7 col-lg-12">
+            <div class="container align-self-center p-6">
+              <h1 class=" font-wight-bold text-light mb-3">Iniciar Sesión.</h1>
+              <div class="form-group">
+                <button class=" btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100" ><i class="icon ion-logo-google lead align-middle mr-2"></i></ion-icon> Google</button>
+                <button class=" btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i>Facebook</button>
+              </div>
+              <p class="text-ruted mb-5 text-light">Ingresa la siguiente información para Iniciar Sesión.</p>
+              <form action="iniciar_sesion.php" method="POST">
+                <div class="form-row mb-2">
+                  <div class="form-group col-md-10">
+                    <label class="font-weight-bold text-light">Correo Electrónico <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su Correo Electronico" required>
+                  </div>
+                  <div class="form-group col-md-10">
+                    <label class="font-weight-bold text-light">Contraseña <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese una Contraseña" required>
+                  </div>
+                </div>
+                <button class="btn btn-primary width-100 width-100" id="enviar" name="enviar" type="submit">Iniciar Sesión</button>
+                <div class="alert"> <?php echo isset($alert) ? $alert : ''; ?> </div>
+              </form>
+              <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2021 AppTrasporte</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="page-footer mt-5" style="background-color: black; ">
+        <div style="background-color: #030883 ;">
+          <div class="container">
+            <div class="row py-4 d-flex align-items-center">
+              <div class="col-md-12 text-center">
+                <a href="#"><i class="fab fa-facebook-f text-white mr-4"> </i></a>
+              <a href="#"><i class="fab fa-twitter text-white mr-4"> </i></a>
+              <a href="#"><i class="fab fa-google-plus-g text-white mr-4"> </i></a>
+              <a href="#"><i class="fab fa-linkedin-in text-white mr-4"> </i></a>
+              <a href="#"><i class="fab fa-instagram text-white"> </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container text-center text-md-left mt-5">
+          <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold text-light">App Transporte</h6>
+              <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height:2px;">
+              <p class="mt-2 text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni eveniet dolorum molestias eum quos eos aliquam voluptatibus quaerat ex adipisci labore et sed sint quo odio laboriosam quod, deserunt cumque! </p>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold text-light">Servicios</h6>
+              <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto " style="width: 85px; height: 2px;">
+               <ul class="list-unstyled">
+                  <li class="my-1"><a href="#" class="text-light">Rutas</a></li>
+                  <li class="my-1"><a href="#" class="text-light">Ciudades</a></li>
+                  <li class="my-1"><a href="#" class="text-light">Seguridad</a></li>
+                  <li class="my-1"><a href="#" class="text-light">Aliados</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold text-light">Enlances</h6>
+              <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto text-light" style="width: 90px; height: 2px;">
+              <ul class="list-unstyled">
+                <li class="my-2"><a href="index.html" class="text-light">Inicio</a></li>
+                <li class="my-2"><a href="nosotros.html" class="text-light">Nosotros</a></li>
+                <li class="my-2"><a href="#" class="text-light">Rutas</a></li>
+                <li class="my-2"><a href="contactanos.html" class="text-light">Contáctenos</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold text-light">Contácto</h6>
+              <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height: 2px;">
+                <ul class="list-unstyled">
+                  <li class="my-2 text-light"><i class="fas fa-home mr-3"></i> Medellín, Antioquia, Col.</li>
+                  <li class="my-2 text-light"><i class="fas fa-envelope mr-3"></i> apptransporte@gmail.com</li>
+                  <li class="my-2 text-light"><i class="fas fa-phone mr-3"></i> + 57 300 200 10</li>
+                  <li class="my-2 text-light"><i class="fas fa-print mr-3"></i> + 57 333 555 99</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright text-center py-3 text-light">
+          <p>&copy; Copyright
+          <a href="#" style="color:white;">Apptransporte.com</a></p>
+          <p style="color: white;">Diseñado por Apptransporte S.A.S</p>
+        </div>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>

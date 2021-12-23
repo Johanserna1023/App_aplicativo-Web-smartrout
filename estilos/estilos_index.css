@@ -1,0 +1,121 @@
+.header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;/* overflow puede tomar el valor de visible, hidden o scroll*/
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: linear;
+}
+
+.slider .slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+.navbar-brand {
+    height: 2%;
+}
+
+#logo {
+    max-height: 4%;
+    padding: 0 auto;
+    margin-top: 0;
+}
+
+.d-block{
+    overflow: hidden;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+   
+    25% {
+        margin-left: -100%
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%
+    }
+    100% {
+        margin-left: -300%;
+    }
+   
+   
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+}
+
+li {
+    float: left;
+}
+
+li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.left,
+.middle,
+.right {
+    padding: 10px;
+    height: 300px;
+}
+
+.left {
+    grid-area: left;
+    column-count: 1;
+}
+
+.middle {
+    grid-area: middle;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
